@@ -1,22 +1,21 @@
 * {
-    font-family: Viga;
-    margin: 0;
-    padding: 0;
+  font-family: Viga;
+  margin: 0;
+  padding: 0;
 }
 
 .background {
-    background-image: url('../images/background.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 0 -50px;
-    height: 736px;
-    text-align: left;
-    padding-right: 2px;
-    color: rgb(0, 0, 0);
-    padding-top: 2rem;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 -50px;
+  height: 736px;
+  text-align: left;
+  padding-right: 2px;
+  color: rgb(0, 0, 0);
+  padding-top: 2rem;
 }
 
 .jumbotron {
-    background-color:black;
+  background-color: black;
 }
-
