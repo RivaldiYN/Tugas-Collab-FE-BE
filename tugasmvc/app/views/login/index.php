@@ -1,95 +1,54 @@
-<!-- background -->
-<div class="container-fluid background">
-    <div class="card shadow mt-5 w-75 mx-auto p-3 mb-5 bg-body rounded">
-        <!-- navtab -->
-        <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+<!DOCTYPE html>
+<html lang="en">
 
-            <!-- pills Tab sign Up -->
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Sign Up</button>
-            </li>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="<?= BASEURL; ?>/css/bootstrap.css" rel="stylesheet">
+    <link href="http://localhost/tugasmvc/public/style/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed:wght@500&family=Livvic:wght@300&family=Quicksand:wght@700&family=Viga&display=swap" rel="stylesheet">
+</head>
 
-            <!-- pils Tab Log In -->
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Login</button>
-            </li>
-        </ul>
-
-        <!-- tab sign up -->
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <h4 class="my-4">Sign Up</h4>
-                <form class="row g-3">
-                    <!-- namaDepan -->
-                    <div class="col-md-6">
-                        <label class="form-label">Nama Depan</label>
-                        <input type="text" class="form-control" id="namaDepan" placeholder="Jhon">
+<body>
+    <!-- background -->
+    <div class="container-fluid background">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-transparent mb-0">
+                            <h5 class="text-center">Please <span class="font-weight-bold text-primary">LOGIN</span></h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="<?= BASEURL; ?>/home/index">
+                                <div class="form-group">
+                                    <input type="text" name="username" id="username" class="form-control" placeholder="Email" autocomplete="off" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" autocomplete="off" required>
+                                </div>
+                                <div class="form-group custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                    <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="" value="Login" class="btn btn-primary btn-block">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <!-- namaBelakang -->
-                    <div class="col-md-6">
-                        <label class="form-label">Nama Belakang</label>
-                        <input type="text" class="form-control" id="namaBelakang" placeholder="Doe">
-                    </div>
-                    <!-- Username -->
-                    <div class="col-12">
-                        <label for="inputAddress" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="wummpy3515">
-                    </div>
-                    <!-- Pass -->
-                    <div class="col-12">
-                        <label for="inputAddress2" class="form-label">Password</label>
-                        <input type="text" class="form-control" id="password">
-                    </div>
-                    <!-- Select Gender -->
-                    <div class="col-md-4">
-                        <label for="inputState" class="form-label">Jenis Kelamin</label>
-                        <select id="inputState" class="form-select">
-                            <!-- option gender -->
-                            <option>Laki-laki</option>
-                            <option>Perempuan</option>
-                        </select>
-                    </div>
-                    <!-- checkbox agree -->
-                    <div class="form-check d-flex justify-content-center mb-4">
-                        <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
-                            aria-describedby="registerCheckHelpText" />
-                        <label class="form-check-label" for="registerCheck">
-                            Saya telah membaca syarat dan ketentuan
-                        </label>
-                    </div>
-                    <!-- tombol sign up -->
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Sign Up</button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- tab log in -->
-            <div class="tab-pane fade justify-content-center" id="pills-profile" role="tabpanel"
-                aria-labelledby="pills-profile-tab">
-                <h4 class="mt-4">Log In</h4>
-                <h5 class="mb-4">masukan usename dan password anda!!!</h5>
-                <form>
-                    <!-- text username -->
-                    <div class="mb-3">
-                        <label class="form-label">Username</label>
-                        <input type="text" class="form-control" id="exampleInputUserName" aria-describedby="emailHelp">
-                    </div>
-                    <!-- text password -->
-                    <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword">
-                    </div>
-                    <!-- link forgot password -->
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <a href="#!">Forgot password?</a>
-                    </div>
-                    <!-- tombol log in -->
-                    <button type="submit" class="btn btn-primary">Log In</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="<?= BASEURL; ?>/js/bootstrap.js"></script>
+    <script src="<?= BASEURL; ?>/js/script.js"></script>
+</body>
+
+</html>
